@@ -136,6 +136,20 @@ exports.current_user = function ( req, res, next ){
   next();
 };
 
+var getapi = function ( req, res ){
+	var json = {
+		"api": [1, 5, 9]
+	};
+	res.json(json);
+};
+
+var createrandom = function ( req, res ){
+	var num = Math.floor(Math.random() * 100);
+	res.json(num);
+};
+
+
+
 
 exports.create = create;
 exports.index = index;
@@ -144,4 +158,5 @@ exports.edit = edit;
 exports.update = update;
 exports.completed = completed;
 exports.checktodo = checktodo;
-
+exports.getapi = getapi;
+exports.createrandom = createrandom;

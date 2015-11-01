@@ -37,8 +37,8 @@ app.post('/update/:id', routes.update);
 app.get('/completed/:id', routes.completed);
 app.get('/checktodo/:id', routes.checktodo);
 
-
-
+app.get('/api', routes.getapi);
+app.get('/api/:id', routes.createrandom);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
