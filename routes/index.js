@@ -138,7 +138,20 @@ exports.current_user = function ( req, res, next ){
 
 var getapi = function ( req, res ){
 	var json = {
-		"api": [1, 5, 9]
+		"api": [
+			{
+				"name": "vm1",
+				"id": 1
+			},
+			{
+				"name": "vm2",
+				"id": 5
+			},
+			{
+				"name": "vm3",
+				"id": 9
+			}
+		]
 	};
 	res.json(json);
 };
